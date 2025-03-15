@@ -1,0 +1,25 @@
+{% extends 'photos/base.html' %}
+ {% block title %}Galerie d'Images{% endblock%} 
+ {% block content %} 
+ {% for image in images %}
+<div class="col-md-3">
+  <div class="card">
+    <img
+      class="card-img-top"
+      alt="Bootstrap Thumbnail First"
+      src="{{ image.image.url }}"
+    />
+    <div class="card-block">
+      <p>
+        <a class="btn btn-primary" href="{% url 'image_detail' image.pk %}"
+          >Detail</a
+        >
+        <a class="btn btn-danger" href="{% url 'image_delete' image.pk %}"
+          >Delete</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %} 
+{% endblock %}
