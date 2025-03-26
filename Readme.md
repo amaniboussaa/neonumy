@@ -1,4 +1,4 @@
-# Neonumy Photo Album Test
+# Neonumy Photo Album
 
 ## Overview
 Neonumy Photo Album Test is a simple web application that allows users to upload, list, view, and delete images. The project focuses on functionality over aesthetics and provides a REST API for CRUD operations. PostgreSQL is used as the primary database.
@@ -50,8 +50,8 @@ $ docker-compose exec web python manage.py migrate
 |---------|---------------|---------------------------|
 | GET     | /photos/list   | List all images           |
 | POST    | /photos/upload   | Upload an image           |
-| GET     | /photos/<id> | Get image details       |
-| DELETE  | /photos/<id>/delete | Delete an image         |
+| GET     | /photos/id | Get image details       |
+| DELETE  | /photos/id/delete | Delete an image         |
 
 ### Stop the Docker containers:
 ```sh
